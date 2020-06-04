@@ -17,7 +17,7 @@ class Order {
   id: string;
 
   @OneToOne(() => Customer, { eager: true })
-  @JoinColumn({ name: 'customer()id' })
+  @JoinColumn({ name: 'customer_id' })
   customer: Customer;
 
   @OneToMany(() => OrdersProducts, ordersProducts => ordersProducts.order, {
